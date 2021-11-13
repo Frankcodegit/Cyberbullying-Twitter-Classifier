@@ -10,7 +10,7 @@ pytz==2018.9
 regex==2019.12.20
 scikit-learn==0.22.2.post1
 scikit-image
-scipy==1.4.1
+scipy
 six==1.15.0
 smart-open==5.2.1
 sqlparse==0.4.2
