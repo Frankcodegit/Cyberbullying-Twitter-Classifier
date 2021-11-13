@@ -32,11 +32,11 @@ def prediction(ds,feature):
     # cyberbullying classification
     if ds == 1:
         # svm_tfidf
-        with open('ds1_svm_comb.pkl', 'wb') as svm1:
+        with open('ds1_svm_comb.pkl', 'rb') as svm1:
             svm_tfidf_1 = pickle.load(svm1)
         prediction  = svm_tfidf_1.predict(feature)
     elif ds==2:
-        with open('ds2_svm_comb.pkl', 'wb') as svm2:
+        with open('ds2_svm_comb.pkl', 'rb') as svm2:
             svm_tfidf_2  = pickle.load(svm2)
         prediction = svm_tfidf_2.predict(feature)
 
