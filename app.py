@@ -32,10 +32,10 @@ def prediction(ds,feature):
     # cyberbullying classification
     if ds == 1:
         # svm_tfidf
-        svm_tfidf_1= pickle.load(open('saved_model/ds1_svm_comb.pkl', 'rb'))
+        svm_tfidf_1= pickle.load(open('ds1_svm_comb.pkl', 'rb'))
         prediction  = svm_tfidf_1.predict(feature)
     elif ds==2:
-        svm_tfidf_2 = pickle.load(open('saved_model/ds2_svm_comb.pkl', 'rb'))
+        svm_tfidf_2 = pickle.load(open('ds2_svm_comb.pkl', 'rb'))
         prediction = svm_tfidf_2.predict(feature)
 
     with st.spinner(text='Predicting...'):
@@ -303,9 +303,9 @@ def preprocess_feature_text(ds,text):
     #tfidf transforming text
     transformer = TfidfTransformer()
     if ds == 1:
-        loaded_vec = CountVectorizer(decode_error="replace", vocabulary=pickle.load(open("saved_model/ds1_tfidf_vocab_comb.pkl", "rb")))
+        loaded_vec = CountVectorizer(decode_error="replace", vocabulary=pickle.load(open("ds1_tfidf_vocab_comb.pkl", "rb")))
     elif ds == 2:
-        loaded_vec = CountVectorizer(decode_error="replace",vocabulary=pickle.load(open("saved_model/ds2_tfidf_vocab_comb.pkl", "rb")))
+        loaded_vec = CountVectorizer(decode_error="replace",vocabulary=pickle.load(open("ds2_tfidf_vocab_comb.pkl", "rb")))
     tfidf_feature = transformer.fit_transform(loaded_vec.fit_transform(np.array([clean_text])))
     tf_f = pd.DataFrame(tfidf_feature.toarray())
 
