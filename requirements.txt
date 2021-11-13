@@ -148,7 +148,6 @@ ipython-sql==0.3.9
 ipywidgets==7.6.5
 itsdangerous==1.1.0
 jax==0.2.21
-jaxlib @ https://storage.googleapis.com/jax-releases/cuda111/jaxlib-0.1.71+cuda111-cp37-none-manylinux2010_x86_64.whl
 jdcal==1.4.1
 jedi==0.18.0
 jieba==0.42.1
@@ -332,7 +331,6 @@ tblib==1.7.0
 tensorboard==2.7.0
 tensorboard-data-server==0.6.1
 tensorboard-plugin-wit==1.8.0
-tensorflow @ file:///tensorflow-2.7.0-cp37-cp37m-linux_x86_64.whl
 tensorflow-datasets==4.0.1
 tensorflow-estimator==2.7.0
 tensorflow-gcs-config==2.7.0
@@ -351,7 +349,6 @@ tifffile==2021.11.2
 toml==0.10.2
 tomli==1.2.2
 toolz==0.11.2
-torch @ https://download.pytorch.org/whl/cu111/torch-1.10.0%2Bcu111-cp37-cp37m-linux_x86_64.whl
 torchsummary==1.5.1
 torchtext==0.11.0
 tornado==5.1.1
