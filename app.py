@@ -303,9 +303,13 @@ def preprocess_feature_text(ds,text):
     #tfidf transforming text
     transformer = TfidfTransformer()
     if ds == 1:
-        loaded_vec = CountVectorizer(decode_error="replace", vocabulary=pickle.load(open("ds1_tfidf_vocab_comb.pkl", "rb")))
+        #loaded_vec = CountVectorizer(decode_error="replace", vocabulary=pickle.load(open("ds1_tfidf_vocab_comb.pkl", "rb")))
+        with open('ds1_tfidf_vocab_comb.pkl', 'rb') as ifp1:
+            loaded_vec = pickle.load(ifp1))
     elif ds == 2:
-        loaded_vec = CountVectorizer(decode_error="replace",vocabulary=pickle.load(open("ds2_tfidf_vocab_comb.pkl", "rb")))
+        #loaded_vec = CountVectorizer(decode_error="replace",vocabulary=pickle.load(open("ds2_tfidf_vocab_comb.pkl", "rb")))
+        with open('ds2_tfidf_vocab_comb.pkl', 'rb') as ifp2:
+            loaded_vec = pickle.load(ifp2))
     tfidf_feature = transformer.fit_transform(loaded_vec.fit_transform(np.array([clean_text])))
     tf_f = pd.DataFrame(tfidf_feature.toarray())
 
